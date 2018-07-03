@@ -1,22 +1,21 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-import login from '@/view/login'
+import upload from '@/view/upload'
 
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
+      {
+        path: '/',
+        name: 'upload',
+        component: upload,
+        hidden: true,
+        meta: {name:'joubn'},
+        query:{name:'joubn'},
 
-    {
-      path: '/',
-      name: 'login',
-      component: login,
-      hidden: true,
-      meta: {name:'joubn'},
-      query:{name:'joubn'},
-
-    }
+      }
     ]
 })

@@ -1,5 +1,34 @@
-
 import CryptoJS from 'crypto-js'
+
+/* 提交地址
+ * 华东空间使用 upload.qiniup.com
+ * 华北空间使用 upload-z1.qiniu.com
+ * 华南空间使用 upload-z2.qiniu.com
+ * 北美空间使用 upload-na0.qiniu.com
+ */
+
+let action = "https://upload.qiniup.com"
+
+// 空间名
+
+let bucketName = 'bucketdemo';
+
+//	AccessKey
+
+let AK = 'n2phvIqT_49KuUKCxdFEiUFM8-GIYTaTFPzy1QTb';
+
+//  SecretKey
+
+let SK = 'u7GnAvumfWyMo6yXw-mSXLztEn0PPSE4PmBwDRwG';
+
+
+//空间绑定域名
+
+let domain = 'http://pbafbo2ye.bkt.clouddn.com/'
+
+
+
+
 /* utf.js - UTF-8 <=> UTF-16 convertion
  *
  * Copyright (C) 1999 Masanao Izumo <iz@onicos.co.jp>
@@ -168,18 +197,6 @@ let genUpToken = function(accessKey, secretKey, putPolicy) {
   return upload_token;
 };
 
-/* 提交地址
- * 华东空间使用 upload.qiniup.com
- * 华北空间使用 upload-z1.qiniu.com
- * 华南空间使用 upload-z2.qiniu.com
- * 北美空间使用 upload-na0.qiniu.com
- */
-let action = "https://upload-z2.qiniu.com"                        //提交地址
-let bucketName = 'blog';                                  // 空间名
-let AK = 'n2phvIqT_49KuUKCxdFEiUFM8-GIYTaTFPzy1QTb';            //	AccessKey
-let SK = 'u7GnAvumfWyMo6yXw-mSXLztEn0PPSE4PmBwDRwG';            //  SecretKey
-
-let domain = 'http://static.joubn.com/'              //空间绑定域名
 
 let token = () => {
   let policy = {};
